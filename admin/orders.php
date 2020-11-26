@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <div class="admin_menu">
+        <?php
+        include 'menu.php';
+        ?>
+    </div>
+    <?php
+    require_once '../php/connection.php';
+    $link = mysqli_connect($host, $user, $password, $database)
+        or die("Ошибка " . mysqli_error($link));
+    $query = "SELECT * FROM orders";
+    $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
+    if ($result) {
+        $rows = mysqli_num_rows($result); // количество полученных строк
+
+        echo "<table class=\"table_price\">
+    <tr>
+        <th>IdOrder</th>
+        <th>ФИО</th>
+        <th>Телефон</th>
+        <th>E-mail</th>
+        <th>Адрес</th>
+        <th>IDItem</th>
+        <th>Название</th>
+        <th>Цена</th>
+        <th>Дата</th>
+    </tr>";
+        for ($i = 0; $i < $rows; ++$i) {
+            $row = mysqli_fetch_row($result);
+            echo "<tr>";
+            for ($j = 0; $j < 9; ++$j) echo "<td>$row[$j]</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+
+        // очищаем результат
+        mysqli_free_result($result);
+    }
+    ?>
+</body>
+</html>
