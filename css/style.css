@@ -110,6 +110,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     position: absolute;
+    justify-content: center;
     top: 160%;
     left: 0;
     width: 180%;
@@ -120,6 +121,10 @@ body {
     -moz-transition: 0.5s ease-in-out;
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
+}
+
+.topmenu .submenu li {
+    color: #2e9dec;
 }
 
 .submenu li a {
@@ -134,17 +139,13 @@ body {
     -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
-    background: #fff;
+    background: #2e9dec;
 }
 
 .menu ul li:hover .submenu {
     -webkit-transform: scaleY(1);
     -ms-transform: scaleY(1);
     transform: scaleY(1);
-}
-
-.menu ul a {
-    color: #9B4222;
 }
 
 
