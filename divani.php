@@ -72,16 +72,7 @@
                 <div class="row-items">
                     <?php
                     //////////////////////////////NEW/////////////////////////////////////
-                    //include "get_item_from_DB.php"
-
-
-
-
-
-
-
-
-
+                    //include "php/get_item_from_DB.php"
 
                     //////////////////////////////OLD/////////////////////////////////////
                     require_once 'php/connection.php';
