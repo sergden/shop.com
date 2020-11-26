@@ -1,4 +1,5 @@
 ﻿<html>
+
 <head>
     <title>Каталог товаров</title>
     <meta charset="utf-8" />
@@ -6,6 +7,7 @@
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
 </head>
+
 <body>
     <div class="top">
         <header class="header">
@@ -69,7 +71,7 @@
             <div class="row">
                 <div class="row-items">
                     <?php
-                    include "php/get_catalog.php";
+                    include "php/get_categories_for_catalog.php";
                     ?>
                 </div>
             </div>
@@ -79,4 +81,5 @@
         <?php include "footer.php" ?>
     </footer>
 </body>
+
 </html>

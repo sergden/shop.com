@@ -1,10 +1,12 @@
 ﻿<html>
+
 <head>
     <title>Диваны</title>
     <meta charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
 </head>
+
 <body>
     <div class="top">
         <header class="header">
@@ -69,6 +71,19 @@
             <div class="row">
                 <div class="row-items">
                     <?php
+                    //////////////////////////////NEW/////////////////////////////////////
+                    //include "get_item_from_DB.php"
+
+
+
+
+
+
+
+
+
+
+                    //////////////////////////////OLD/////////////////////////////////////
                     require_once 'php/connection.php';
                     $link = mysqli_connect($host, $user, $password, $database) or die("Error" . mysqli_error($link));
                     $query = "SELECT * FROM catalogdivani";
@@ -96,4 +111,5 @@
         <?php include "footer.php" ?>
     </footer>
 </body>
+
 </html>

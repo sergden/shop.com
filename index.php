@@ -82,7 +82,7 @@
             <h1 align="center">Наш магазин</h1>
             <div class="row">
                 <?php
-                include "php/get_catalog.php";
+                include "php/get_categories_for_catalog.php";
                 ?>
             </div>
         </div>
