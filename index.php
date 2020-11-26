@@ -32,9 +32,11 @@
             </div>
             <h1 align="center">Наш ассортимент</h1>
             <div class="row">
-                <?php
-                include "php/get_categories_for_catalog.php";
-                ?>
+                <div class="row-items">
+                    <?php
+                    include "php/get_categories_for_catalog.php";
+                    ?>
+                </div>
             </div>
         </div>
     </div>

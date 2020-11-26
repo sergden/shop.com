@@ -14,7 +14,7 @@ a {
 }
 
 i.fa {
-    color: #ff0000;
+    color: #fff;
 }
 
 body {
@@ -32,6 +32,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 0 5px;
 }
 
 .header .logo {
@@ -190,7 +191,7 @@ body {
     width: 100%;
     height: 42px;
     padding-left: 10px;
-    border: 2px solid #ff0000;
+    border: 2px solid #078be9;
     border-radius: 10px;
     outline: none;
     background: #fff;
@@ -204,13 +205,13 @@ body {
     width: 42px;
     height: 42px;
     border: none;
-    background: #ff0000;
+    background: #108ee7;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
 
 .search button:hover {
-    background-color: #db0000;
+    background-color: #078be9;
     cursor: pointer;
 }
 
@@ -308,7 +309,7 @@ body {
     border: none;
     border-radius: 10px;
     padding: 16px 55px;
-    background-color: #ff0000;
+    background-color: #2e9dec;
     -webkit-transition: .3s all;
     transition: .3s all;
     margin-top: 20px;
@@ -316,7 +317,7 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: #db0000;
+    background-color: #078be9;
     cursor: pointer;
 }
 
@@ -446,7 +447,7 @@ body {
     border: none;
     border-radius: 10px;
     padding: 16px 55px;
-    background-color: #ff0000;
+    background-color: #2e9dec;
     -webkit-transition: .3s all;
     transition: .3s all;
     margin-top: 10px;
@@ -454,7 +455,7 @@ body {
 }
 
 .feedback-form .submit-btn:hover {
-    background-color: #db0000;
+    background-color: #078be9;
     cursor: pointer;
 }
 
@@ -610,7 +611,7 @@ body {
     border: none;
     border-radius: 10px;
     padding: 16px 55px;
-    background-color: #ff0000;
+    background-color: #2e9dec;
     -webkit-transition: .3s all;
     transition: .3s all;
     margin-top: 10px;
@@ -618,7 +619,7 @@ body {
 }
 
 .form_order .order-btn:hover {
-    background-color: #db0000;
+    background-color: #078be9;
     cursor: pointer;
 }
 
