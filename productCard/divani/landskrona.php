@@ -67,6 +67,25 @@
     <div class="wrapper">
         <div class="content">
             <?php
+            /////////////////////////NEW/////////////////////////
+            // require_once '../../php/connection.php';
+            // $link = mysqli_connect($host, $user, $password, $database) or die("Error" . mysqli_error($link));
+            // $query = "SELECT * FROM `catalog` WHERE `Meta-tag`='friheten'";
+            // $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
+            // $row = mysqli_fetch_row($result);
+            // $h1 = $row[1];
+            // $id = $row[0];
+            // $name_item = $row[1];
+            // $image = $row[6];
+            // $price = $row[3];
+            // $description = $row[4];
+            // echo "<title>$row[1]</title>"; //title
+            // mysqli_free_result($result);
+            // mysqli_close($link);
+
+
+            //////////////////////////OLD/////////////////
+
             require_once '../../php/connection.php';
             $link = mysqli_connect($host, $user, $password, $database) or die("Error" . mysqli_error($link));
             $query = "SELECT * FROM catalogdivani WHERE id=5";

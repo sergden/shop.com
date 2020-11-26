@@ -1,9 +1,11 @@
 ﻿<html>
+
 <head>
     <meta charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
 </head>
+
 <body>
     <div class="top">
         <header class="header">
@@ -64,6 +66,24 @@
     <div class="wrapper">
         <div class="content">
             <?php
+            /////////////////////////NEW/////////////////////////
+            // require_once '../../php/connection.php';
+            // $link = mysqli_connect($host, $user, $password, $database) or die("Error" . mysqli_error($link));
+            // $query = "SELECT * FROM `catalog` WHERE `Meta-tag`='friheten'";
+            // $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
+            // $row = mysqli_fetch_row($result);
+            // $h1 = $row[1];
+            // $id = $row[0];
+            // $name_item = $row[1];
+            // $image = $row[6];
+            // $price = $row[3];
+            // $description = $row[4];
+            // echo "<title>$row[1]</title>"; //title
+            // mysqli_free_result($result);
+            // mysqli_close($link);
+
+
+            //////////////////////////OLD/////////////////
             require_once '../../php/connection.php';
             $link = mysqli_connect($host, $user, $password, $database) or die("Error" . mysqli_error($link));
             $query = "SELECT * FROM catalogdivani WHERE id=1";
@@ -72,7 +92,7 @@
             $h1 = $row[2];
             $id = $row[0];
             $name_item = $row[2];
-            $name = $row[1] . $row[5];
+            $image = $row[1] . $row[5];
             $price = $row[4];
             $description = $row[3];
             echo "<title>$row[2]</title>"; //title
@@ -83,7 +103,7 @@
             <div class="product-card">
                 <div class="product-item">
                     <a>
-                        <img src="../../img/divani/<?= $name ?>" />
+                        <img src="../../img/divani/<?= $image ?>" />
                         <h4><?= $price ?> ₽*</h4>
                         <h6>Цены уточняйте у менеджера</h4>
                             <form method="POST" action="../../php/addtocart.php">
@@ -105,4 +125,5 @@
         ?>
     </footer>
 </body>
+
 </html>
