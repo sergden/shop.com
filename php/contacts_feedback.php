@@ -10,7 +10,7 @@ if (isset($_POST['fio']) && isset($_POST['phone']) && isset($_POST['message'])) 
     $message = htmlentities(mysqli_real_escape_string($link, trim($_POST['message'])));
     $date_time = date('Y-m-d H:i:s');
 
-    $query = "INSERT INTO `feedback` (`id`, `fio`, `phone`, `email`, `message`, `time`) VALUES (NULL, '$fio', '$phone', '$email', '$message', '$date_time') ";
+    $query = "INSERT INTO `feedback` (`id`, `fio`, `phone`, `E-mail`, `message`, `Date-time`) VALUES (NULL, '$fio', '$phone', '$email', '$message', '$date_time') ";
     $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
 
     if ($result) {

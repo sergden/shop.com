@@ -6,7 +6,7 @@
 <nav class="menu">
     <ul class=" topmenu">
         <li>
-            <a href="catalog.php" class="submenu-link">
+            <a href="../../catalog.php" class="submenu-link">
                 Каталог
                 <i class="fa fa-angle-down"></i>
             </a>

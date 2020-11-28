@@ -1,4 +1,5 @@
 ﻿<html>
+
 <head>
     <title>Корзина</title>
     <meta charset="utf-8" />
@@ -6,16 +7,17 @@
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
 </head>
+
 <body>
     <div class="top">
         <header class="header">
-            <?php include "header.php"?>
+            <?php include "header.php" ?>
         </header>
     </div>
 
     <div class="wrapper">
         <div class="content">
-            <!-- <h1 align="center">Корзина</h1> -->
+            <h1 align="center">Корзина</h1>
             <div class="row">
                 <form method="POST">
                     <?php
@@ -23,13 +25,13 @@
                     $link = mysqli_connect($host, $user, $password, $database) or die("Ошибка " . mysqli_error($link));
                     $query = "SELECT * FROM temp_cart_for_user";
                     $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
+                    $price = 0;
                     getData($result, $link);
                     function getData($result, $link)
                     {
                         if ($result) {
                             $rows = mysqli_num_rows($result); // количество полученных строк
                             echo "<table class=\"table_price\">
-                        <caption>Cart</caption>
                         <tbody>
                             <tr>
                                 <th>#</th>
@@ -44,7 +46,6 @@
                                 $change_query = "UPDATE `temp_cart_for_user` SET `id` = '$i' WHERE `temp_cart_for_user`.`id` = $temp_row ";
                                 mysqli_query($link, $change_query);
                                 echo "<tr>";
-
                                 echo "<td>$i</td>";
                                 for ($j = 1; $j < 4; ++$j) echo "<td>$row[$j]</td>";
                                 echo "<td>
@@ -52,6 +53,8 @@
                              </td>";
                                 echo "</tr>";
                                 $i = --$i;
+                                global  $price;
+                                $price += $row[3];
                             }
                             echo "</table>";
                         }
@@ -67,16 +70,20 @@
                     {
                         $query_delete = "DELETE FROM `temp_cart_for_user` WHERE id = $id";
                         $result_delete = mysqli_query($link, $query_delete) or die("Ошибка " . mysqli_error($link));
+                        echo "<meta http-equiv=\"refresh\" content=\"0;URL=cart.php\">";
                     }
                     // очищаем результат
                     mysqli_free_result($result);
-
                     mysqli_close($link);
                     ?>
                 </form>
                 <form class="delete_all" action="php/delete_all.php" method="POST">
                     <input class="delete_all_btn" type="submit" value="Удалить все">
                 </form>
+            </div>
+
+            <div class="row">
+                <h4>Итого: <?= $price ?> ₽</h4>
             </div>
             <div class="order">
                 <h3 align="center">Оформление заказа</h3>
@@ -101,4 +108,5 @@
         <?php include "footer.php" ?>
     </footer>
 </body>
+
 </html>
