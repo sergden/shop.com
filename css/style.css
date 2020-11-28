@@ -20,8 +20,6 @@ i.fa {
 body {
     height: 100%;
     background-color: #fff;
-    /*font-family: "Open Sans", sans serif;
-    font-family: sans-serif;*/
     font-family: Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.5;
 }
@@ -52,7 +50,6 @@ hr {
     color: white;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content:; */
     align-items: center;
     position: relative;
     top: 4px;
@@ -188,7 +185,6 @@ hr {
 .search form {
     position: relative;
     width: 300px;
-    /*  margin: 0 auto;*/
 }
 
 .search-on-suite {
@@ -199,7 +195,6 @@ hr {
     border-radius: 10px;
     outline: none;
     background: #fff;
-    /*color: #9E9C9C;*/
 }
 
 .search button {
@@ -267,9 +262,6 @@ hr {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 30px;
-    /*        display:flex;
-    flex-wrap:wrap;
-    justify-content:left;*/
 }
 
 .content .title {
@@ -295,7 +287,6 @@ hr {
     justify-content: center;
     margin-top: 40px;
     margin-left: 15px;
-    /* margin-right: -60px;*/
 }
 
 .row-items {
@@ -395,7 +386,6 @@ hr {
 
 .views-row h3 {
     font-weight: normal;
-    /*margin-top:-40px;*/
 }
 
 
@@ -417,8 +407,6 @@ hr {
 
 .description {
     margin-top: 30px;
-    /* padding-left: 70px;
-    padding-top: 50px; */
 }
 
 .product-item img {
@@ -428,7 +416,6 @@ hr {
 
 .product-item h3 {
     font-weight: normal;
-    /*margin-top:-40px;*/
 }
 
 
