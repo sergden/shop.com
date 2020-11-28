@@ -1,6 +1,6 @@
 <div class="logo">
-    <a href="index.php">
-        <img src="img/logo.png" />
+    <a href="../../index.php">
+        <img src="../../img/logo.png" />
     </a>
 </div>
 <nav class="menu">
@@ -11,20 +11,20 @@
                 <i class="fa fa-angle-down"></i>
             </a>
             <ul class="submenu">
-                <li><a href="divani.php">Диваны</a></li>
-                <li><a href="kresla.php">Кресла</a></li>
-                <li><a href="krovati.php">Кровати</a></li>
-                <li><a href="fortv.php">Решения для ТВ</a></li>
-                <li><a href="stellagi.php">Стеллажи</a></li>
-                <li><a href="stoli.php">Столы</a></li>
-                <li><a href="styliya.php">Стулья</a></li>
-                <li><a href="shkaphi.php">Шкафы</a></li>
+                <li><a href="../../divani.php">Диваны</a></li>
+                <li><a href="../../kresla.php">Кресла</a></li>
+                <li><a href="../../krovati.php">Кровати</a></li>
+                <li><a href="../../fortv.php">Решения для ТВ</a></li>
+                <li><a href="../../stellagi.php">Стеллажи</a></li>
+                <li><a href="../../stoli.php">Столы</a></li>
+                <li><a href="../../styliya.php">Стулья</a></li>
+                <li><a href="../../shkaphi.php">Шкафы</a></li>
             </ul>
         </li>
-        <li><a href="delivery.php">Оплата и доставка</a></li>
-        <li><a href="contacts.php">Контакты</a></li>
-        <li><a href="warranty.php">Гарантия</a></li>
-        <li><a href="аbout.php">О нас</a></li>
+        <li><a href="../../delivery.php">Оплата и доставка</a></li>
+        <li><a href="../../contacts.php">Контакты</a></li>
+        <li><a href="../../warranty.php">Гарантия</a></li>
+        <li><a href="../../аbout.php">О нас</a></li>
     </ul>
 </nav>
 <div class="search">
@@ -44,7 +44,7 @@
         +7 (863) XXX-XX-XX
     </div>
     <div class="cart">
-        <a href="cart.php">
+        <a href="../../cart.php">
             <i class="fa fa-shopping-basket" aria-hidden="true"></i>
             Корзина
         </a>

@@ -2,6 +2,7 @@
 
 <head>
     <meta charset="utf-8" />
+
     <link type="text/css" rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
 </head>
@@ -19,7 +20,7 @@
             $link = mysqli_connect($host, $user, $password, $database) or die("Error" . mysqli_error($link));
             $query = "SELECT catalog.*, manufacturer.Name as `manufacturer_name`
             FROM catalog INNER JOIN manufacturer ON (catalog.Manufacturer=manufacturer.IDManuf)
-            WHERE `Meta-tag`='friheten'";
+            WHERE `Meta-tag`='malm'";
             $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
             $row = mysqli_fetch_row($result);
             $h1 = $row[1]; //title
@@ -37,7 +38,7 @@
             <div class="product-card">
                 <div class="product-item">
                     <a>
-                        <img src="../../img/divani/<?= $image ?>" />
+                        <img src="../../img/krovati/<?= $image ?>" />
                         <h4> <?= $price ?> ₽* </h4>
                         <form method="POST" action="../../php/addtocart.php">
                             <input class="submit-btn" type="submit" value="Купить**">

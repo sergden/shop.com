@@ -410,10 +410,15 @@ hr {
     justify-content: flex-start;
 }
 
-.product-card .description {
-    width: 60%;
+.product-card .manufacturer {
     padding-left: 70px;
     padding-top: 50px;
+}
+
+.description {
+    margin-top: 30px;
+    /* padding-left: 70px;
+    padding-top: 50px; */
 }
 
 .product-item img {
