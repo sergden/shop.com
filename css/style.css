@@ -702,3 +702,7 @@ input:focus {
     color: #3f3f44;
     padding-left: 10px;
 }
+
+.Table_orders_items {
+    padding-bottom: 50px;
+}
