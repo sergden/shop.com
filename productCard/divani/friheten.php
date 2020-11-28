@@ -66,36 +66,18 @@
     <div class="wrapper">
         <div class="content">
             <?php
-            /////////////////////////NEW/////////////////////////
-            // require_once '../../php/connection.php';
-            // $link = mysqli_connect($host, $user, $password, $database) or die("Error" . mysqli_error($link));
-            // $query = "SELECT * FROM `catalog` WHERE `Meta-tag`='friheten'";
-            // $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
-            // $row = mysqli_fetch_row($result);
-            // $h1 = $row[1];
-            // $id = $row[0];
-            // $name_item = $row[1];
-            // $image = $row[6];
-            // $price = $row[3];
-            // $description = $row[4];
-            // echo "<title>$row[1]</title>"; //title
-            // mysqli_free_result($result);
-            // mysqli_close($link);
-
-
-            //////////////////////////OLD/////////////////
             require_once '../../php/connection.php';
             $link = mysqli_connect($host, $user, $password, $database) or die("Error" . mysqli_error($link));
-            $query = "SELECT * FROM catalogdivani WHERE id=1";
+            $query = "SELECT * FROM `catalog` WHERE `Meta-tag`='friheten'";
             $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
             $row = mysqli_fetch_row($result);
-            $h1 = $row[2];
+            $h1 = $row[1]; //title
             $id = $row[0];
-            $name_item = $row[2];
-            $image = $row[1] . $row[5];
-            $price = $row[4];
-            $description = $row[3];
-            echo "<title>$row[2]</title>"; //title
+            $name_item = $row[1];
+            $image = $row[6];
+            $price = $row[3];
+            $description = $row[4];
+            echo "<title>$row[1]</title>"; //title
             mysqli_free_result($result);
             mysqli_close($link);
             ?>
@@ -104,26 +86,28 @@
                 <div class="product-item">
                     <a>
                         <img src="../../img/divani/<?= $image ?>" />
-                        <h4><?= $price ?> ₽*</h4>
-                        <h6>Цены уточняйте у менеджера</h4>
-                            <form method="POST" action="../../php/addtocart.php">
-                                <input class="submit-btn" type="submit" value="Купить">
-                                <input type="hidden" name="id" value="<?= $id ?>">
-                                <input type="hidden" name="name-item" value="<?= $name_item ?>">
-                                <input type="hidden" name="price" value="<?= $price ?>">
-                                <input type="hidden" name="path" value="divani/<?= $name ?>">
-                            </form>
+                        <h4> <?= $price ?> ₽* </h4>
+                        <form method="POST" action="../../php/addtocart.php">
+                            <input class="submit-btn" type="submit" value="Купить**">
+                            <input type="hidden" name="id" value="<?= $id ?>">
+                            <input type="hidden" name="name-item" value="<?= $name_item ?>">
+                            <input type="hidden" name="price" value="<?= $price ?>">
+                            <input type="hidden" name="path" value="divani/<?= $name ?>">
+                        </form>
                     </a>
                 </div>
                 <div class="description"><?= $description ?></div>
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <?php
-        include "../footer.php";
-        ?>
-    </footer>
+    <hr>
+    <h6>*Цены уточняйте у менеджера</h4>
+        <h6>**Цвет, размеры обговариваются с менеджером после заказа</h6>
+        <footer class="footer">
+            <?php
+            include "../footer.php";
+            ?>
+        </footer>
 </body>
 
 </html>

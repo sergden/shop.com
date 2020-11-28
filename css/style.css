@@ -43,6 +43,10 @@ body {
     min-height: 87%;
 }
 
+hr {
+    width: 400px;
+}
+
 .footer {
     background-color: #434343;
     color: white;
