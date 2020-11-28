@@ -1,4 +1,4 @@
-<meta http-equiv="refresh" content="3; url=/catalog.php">
+<!-- <meta http-equiv="refresh" content="3; url=/catalog.php"> -->
 <?php
 require_once '../php/connection.php';
 if (isset($_POST['id'])) {
@@ -12,9 +12,10 @@ if (isset($_POST['id'])) {
 
     if ($result) {
         echo 'Item Add successful<br>';
-        echo "Возврат в каталог через 3 секунды";
+        echo "Возврат в каталог через 2 секунды";
     } else {
         echo 'Error!';
     }
     mysqli_close($link);
+    echo "<meta http-equiv=\"refresh\" content=\"2;URL=../catalog.php\">";
 }
