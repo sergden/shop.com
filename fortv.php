@@ -1,7 +1,7 @@
 ﻿<html>
 
 <head>
-    <title>Столы</title>
+    <title>Решения для ТВ</title>
     <meta charset="utf-8" />
 
     <link type="text/css" rel="stylesheet" href="css/style.css" />
@@ -18,7 +18,7 @@
 
     <div class="wrapper">
         <div class="content">
-            <h1 align="center">Шкафы</h1>
+            <h1 align="center">Решения для ТВ</h1>
             <div class="row">
                 <div class="row-items">
                     <?php
@@ -26,7 +26,7 @@
                    $link = mysqli_connect($host, $user, $password, $database) or die("Error" . mysqli_error($link));
                    $query = "SELECT catalog.ID, catalog.Title,catalog.Price,catalog.Manufacturer,catalog.Image,catalog.`Meta-tag`, categories.`Meta-tag` as `category_name-tag`
 FROM catalog INNER JOIN categories ON (catalog.`Category`=categories.`IDCat`)
-WHERE catalog.Category=7";
+WHERE catalog.Category=5";
                    $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
                    if ($result) {
                        $rows = mysqli_num_rows($result);
