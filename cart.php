@@ -89,11 +89,13 @@
                 <h3 align="center">Оформление заказа</h3>
                 <div class="form_order" align="center">
                     <form method="POST">
+                        
                         <input type="text" required="" name="fio" maxlength="50" value="" placeholder="ФИО" />
                         <input type="tel" name="phone" required="" value="" size="20" pattern="[0-9]{10}" placeholder="Телефон (без 8)" />
                         <input type="email" name="email" value="" placeholder="E-mail" />
                         <input type="text" name="address" required="" value="" placeholder="Адрес" />
                         <input class="order-btn" type="submit" name="send-btn" value="Оформить заказ" />
+                        <input type="hidden" name="total_price" value="<?=$price?>" />
 
                         <?php
                         include 'php/sent_order.php';
