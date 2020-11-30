@@ -1,9 +1,11 @@
 <html>
+
 <head>
     <link type="text/css" rel="stylesheet" href="../css/style.css" />
     <script src="../js/Script1.js"></script>
     <title>Auth</title>
 </head>
+
 <body>
     <div class="form_auth_block">
         <div class="form_auth_block_content">
@@ -18,4 +20,5 @@
         </div>
     </div>
 </body>
+
 </html>

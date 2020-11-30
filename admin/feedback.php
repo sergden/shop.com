@@ -32,7 +32,6 @@ if ($result) {
         echo "</tr>";
     }
     echo "</table></div>";
-
     // очищаем результат
     mysqli_free_result($result);
 }

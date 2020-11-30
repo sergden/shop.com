@@ -15,8 +15,6 @@
     require_once '../php/connection.php';
     $link = mysqli_connect($host, $user, $password, $database)
         or die("Ошибка " . mysqli_error($link));
-
-    //Table Orders
     $query = "SELECT * FROM catalog";
     $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
     if ($result) {

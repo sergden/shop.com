@@ -44,8 +44,6 @@
         // очищаем результат
         mysqli_free_result($result);
 
-
-
         //Table OrderItems
         $query = "SELECT * FROM OrderItems";
         $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
