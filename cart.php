@@ -11,7 +11,7 @@
 <body>
     <div class="top">
         <header class="header">
-            <?php include "header.php" ?> 
+            <?php include "header.php" ?>
         </header>
     </div>
 
