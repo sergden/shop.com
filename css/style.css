@@ -692,4 +692,10 @@ input:focus {
 
 .Table_orders_items {
     padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.adminform_a {
+    color: black;
 }

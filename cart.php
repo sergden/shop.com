@@ -88,8 +88,7 @@
             <div class="order">
                 <h3 align="center">Оформление заказа</h3>
                 <div class="form_order" align="center">
-                    <form method="POST">
-                        
+                    <form method="POST">                        
                         <input type="text" required="" name="fio" maxlength="50" value="" placeholder="ФИО" />
                         <input type="tel" name="phone" required="" value="" size="20" pattern="[0-9]{10}" placeholder="Телефон (без 8)" />
                         <input type="email" name="email" value="" placeholder="E-mail" />

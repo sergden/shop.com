@@ -2,10 +2,10 @@
 
 <head>
     <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <title>Orders</title>
 </head>
 
 <body>
-    <h1>Admin Panel</h1>
     <div class="admin_menu">
         <?php
         include 'menu.php';
@@ -21,8 +21,7 @@
     $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
     if ($result) {
         $rows = mysqli_num_rows($result); // количество полученных строк
-        echo "<h2>Список заказов</h2>";
-        echo "<div class = \"Table_orders_items\">";
+        echo "<div class = \"Table_orders_items\"><h2>Список заказов</h2>";
         echo "<table class=\"table_price\">
     <tr>
         <th>IdOrder</th>
@@ -32,11 +31,12 @@
         <th>Адрес</th>
         <th>Сумма</th>
         <th>Дата</th>
+        <th>Статус</th>
     </tr>";
         for ($i = 0; $i < $rows; ++$i) {
             $row = mysqli_fetch_row($result);
             echo "<tr>";
-            for ($j = 0; $j < 9; ++$j) echo "<td>$row[$j]</td>";
+            for ($j = 0; $j < 8; ++$j) echo "<td>$row[$j]</td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -51,8 +51,7 @@
         $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
         if ($result) {
             $rows = mysqli_num_rows($result); // количество полученных строк
-            echo "<h2>Товары в заказах</h2>";
-            echo "<div class = \"Table_orders_items\">";
+            echo "<div class = \"Table_orders_items\"><h2>Товары в заказах</h2>";
             echo "<table class=\"table_price\">
             <tr>
                 <th>IdOrder</th>

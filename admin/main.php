@@ -2,10 +2,10 @@
 
 <head>
     <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <title>Main</title>
 </head>
 
 <body>
-    <h1>Admin Panel</h1>
     <div class="admin_menu">
         <?php
         include 'menu.php';
