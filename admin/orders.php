@@ -31,12 +31,11 @@
         <th>Адрес</th>
         <th>Сумма</th>
         <th>Дата</th>
-        <th>Статус</th>
     </tr>";
         for ($i = 0; $i < $rows; ++$i) {
             $row = mysqli_fetch_row($result);
             echo "<tr>";
-            for ($j = 0; $j < 8; ++$j) echo "<td>$row[$j]</td>";
+            for ($j = 0; $j < 7; ++$j) echo "<td>$row[$j]</td>";
             echo "</tr>";
         }
         echo "</table>";

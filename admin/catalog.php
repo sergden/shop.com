@@ -37,7 +37,9 @@
             for ($j = 0; $j < 8; ++$j) echo "<td>$row[$j]</td>";
             echo "<td>
             <form action=\"php/editItem.php\" method=\"POST\">
-            <button type=\"submit\" name=\"edit-btn\" value=\"$row[0]\">Edit</button>
+            <button type=\"submit\" name=\"edit-btn\" value=\"$row[0]\">Edit</button></form>
+            <form action=\"php/deleteitem.php\" method=\"POST\">
+            <button type=\"submit\" name=\"delete-btn\" value=\"$row[0]\">Delete</button></form>
             </td>";
             echo "</tr>";
         }

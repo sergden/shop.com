@@ -15,7 +15,7 @@ $query = "SELECT * FROM feedback";
 $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
 if ($result) {
     $rows = mysqli_num_rows($result); // количество полученных строк
-    echo "<div class = \"Table_orders_items\">";
+    echo "<div class = \"Table_orders_items\"><h2>Сообщения</h2>";
     echo "<table class=\"table_price\">
     <tr>
         <th>IdOrder</th>

@@ -8,4 +8,7 @@ function LogIn() {
     } else if (lg == "" && pswd == "") {} else {
         alert("Check entered login/password and try again");
     }
+	else{
+		alert("Check entered login/password and try again");
+	}
 }
