@@ -9,12 +9,11 @@
 </head>
 
 <body>
-    <div class="top">
+<div class="top">
         <header class="header">
             <?php include "header.php" ?>
         </header>
     </div>
-
 
     <div class="wrapper">
         <div class="content">

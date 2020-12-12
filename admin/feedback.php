@@ -18,7 +18,7 @@ if ($result) {
     echo "<div class = \"Table_orders_items\"><h2>Сообщения</h2>";
     echo "<table class=\"table_price\">
     <tr>
-        <th>IdOrder</th>
+        <th>Id</th>
         <th>ФИО</th>
         <th>Телефон</th>
         <th>E-mail</th>

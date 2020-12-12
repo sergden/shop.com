@@ -27,12 +27,12 @@
         <li><a href="аbout.php">О нас</a></li>
     </ul>
 </nav>
-<div class="search">
+<!-- <div class="search">
     <form name="search-form">
         <input class="search-on-suite" name="search-place" type="text" placeholder="Искать здесь...">
         <button name="search-btn" type="submit"></button>
     </form>
-</div>
+</div> -->
 
 <div class="write-cart">
     <div class="write-tel">
