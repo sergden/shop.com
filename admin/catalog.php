@@ -19,7 +19,8 @@
     $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
     if ($result) {
         $rows = mysqli_num_rows($result); // количество полученных строк
-        echo "<div class = \"Table_orders_items\"><h2>Каталог</h2>";
+        echo "<div class = \"Table_orders_items\"><h2>Каталог</h2><form action=\"php/additem.php\" method=\"POST\">
+        <button type=\"submit\" name=\"add-btn\">Add</button></form>";
         echo "<table class=\"table_price\">
     <tr>
         <th>Id</th>

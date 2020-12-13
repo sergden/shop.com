@@ -7,5 +7,8 @@
     <a href="Catalog.php">Catalog&nbsp;</a>
     <a href="orders.php">Orders&nbsp;</a>
     <a href="feedback.php">Feedback&nbsp;</a>
-    <a href="index.php">Exit&nbsp;</a>
+    <a onclick="Exit() " href="index.php">Exit&nbsp;</a>
 </p>
+
+
+ <script src="../js/Script1.js"></script>

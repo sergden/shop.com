@@ -3,6 +3,7 @@
 <head>
     <link type="text/css" rel="stylesheet" href="../css/style.css" />
     <script src="../js/Script1.js"></script>
+
     <title>Auth</title>
 </head>
 

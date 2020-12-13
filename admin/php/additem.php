@@ -1,28 +1,11 @@
 <?php
 require_once '../../php/connection.php';
-if (isset($_POST['edit-btn'])) {
-    $link = mysqli_connect($host, $user, $password, $database) or die("Error" . mysqli_error($link));
-    $code = $_POST['edit-btn'];
-    $query = "SELECT * FROM catalog WHERE ID=$code";
-    $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
-    if ($result) {
-        $row = mysqli_fetch_row($result);
-        $title = $row[1];
-        $Category = $row[2];
-        $Price = $row[3];
-        $Description = $row[4];
-        $Manufacturer = $row[5];
-        $Image = $row[6];
-        $Meta_tag = $row[7];
-    }
-    mysqli_close($link);
-}
 ?>
 <html>
 
 <head>
     <link type="text/css" rel="stylesheet" href="../../css/style.css" />
-    <title>Edit</title>
+    <title>Add</title>
 </head>
 
 <body>
@@ -30,16 +13,12 @@ if (isset($_POST['edit-btn'])) {
         <a class="adminform_a" href="../main.php">
             <h1>Admin Panel</h1>
         </a>
-        <h3>Edit Mode</h3>
+        <h3>Add Mode</h3>
         <form method="POST" id="updateForm">
             <div class="container_input">
                 <label>
-                    <p>ID</p>
-                    <input type="text" name="ID" value="<?= $code ?>" form="updateForm" size="5" pattern="^[0-9]+$" readonly />
-                </label>
-                <label>
                     <p>Название</p>
-                    <input type="text" name="title" value="<?= $title ?>" form="updateForm" pattern="^[a-zA-Z-А-Яа-яЁё\s]+$"/>
+                    <input type="text" name="title" value="<?= $title ?>" form="updateForm" pattern="^[a-zA-Z-А-Яа-яЁё\s]+$" />
                 </label>
                 <label>
                     <p>Категория</p>
@@ -59,11 +38,11 @@ if (isset($_POST['edit-btn'])) {
                 </label>
                 <label>
                     <p>Фото</p>
-                    <input type="text" name="image" value="<?= $Image ?>" form="updateForm" pattern="^[a-zA-z\.]+$"/>
+                    <input type="text" name="image" value="<?= $Image ?>" form="updateForm" pattern="^[a-zA-z\.]+$" />
                 </label>
                 <label>
                     <p>Meta-tag</p>
-                    <input type="text" name="metatag" value="<?= $Meta_tag ?>" form="updateForm" pattern="^[A-Za-z]+$"/>
+                    <input type="text" name="metatag" value="<?= $Meta_tag ?>" form="updateForm" pattern="^[A-Za-z]+$" />
                 </label>
             </div>
         </form>
@@ -75,7 +54,6 @@ if (isset($_POST['edit-btn'])) {
                     $link = mysqli_connect($host, $user, $password, $database) or die("Ошибка " . mysqli_error($link));
                     if (isset($_POST['title'])) {
                         $link = mysqli_connect($host, $user, $password, $database) or die("Ошибка " . mysqli_error($link));
-                        $ID = htmlentities(mysqli_real_escape_string($link, trim($_POST['ID'])));
                         $title_chng = htmlentities(mysqli_real_escape_string($link, trim($_POST['title'])));
                         $Category_chng = htmlentities(mysqli_real_escape_string($link, trim($_POST['category'])));
                         $Price_chng = htmlentities(mysqli_real_escape_string($link, trim($_POST['price'])));
@@ -83,7 +61,7 @@ if (isset($_POST['edit-btn'])) {
                         $Manufacturer_chng = htmlentities(mysqli_real_escape_string($link, trim($_POST['manufacturer'])));
                         $Image_chng = htmlentities(mysqli_real_escape_string($link, trim($_POST['image'])));
                         $Meta_tag_chng = htmlentities(mysqli_real_escape_string($link, trim($_POST['metatag'])));
-                        $query = "UPDATE `catalog` SET `Title`='$title_chng',`Category`=$Category_chng,`Price`=$Price_chng,`Description`='$Description_chng',`Manufacturer`=$Manufacturer_chng,`Image`='$Image_chng',`Meta-tag`='$Meta_tag_chng' WHERE ID=$ID";
+                        $query = "INSERT INTO `catalog` (`ID`, `Title`, `Category`, `Price`, `Description`, `Manufacturer`, `Image`, `Meta-tag`) VALUES (NULL, '$title_chng', '$Category_chng', '$Price_chng', '$Description_chng', '$Manufacturer_chng', '$Image_chng', '$Meta_tag_chng') ";
                         $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
                         if ($result) {
                             $sys_message = "<span style='color:blue;'>Successful</span>";
